@@ -1,26 +1,27 @@
-AOS.init();
+// Αρχικοποίηση Animations (AOS)
+AOS.init({
+  duration: 800,
+  once: true // Το animation γίνεται μόνο την πρώτη φορά που σκρολάρεις
+});
 
-const lightbox = GLightbox();
+// Αρχικοποίηση Lightbox (για τις εικόνες των έργων)
+const lightbox = GLightbox({
+  touchNavigation: true,
+  loop: true,
+});
 
-// COUNTER ANIMATION
-const counters = document.querySelectorAll('.counter');
+// Κλείσιμο του μενού στα κινητά όταν πατηθεί ένας σύνδεσμος
+const navLinks = document.querySelectorAll('.nav-item .nav-link');
+const menuToggle = document.getElementById('navbarNav');
 
-counters.forEach(counter => {
-  counter.innerText = '0';
-
-  const update = () => {
-    const target = +counter.getAttribute('data-target');
-    const c = +counter.innerText;
-
-    const increment = target / 200;
-
-    if (c < target) {
-      counter.innerText = `${Math.ceil(c + increment)}`;
-      setTimeout(update, 10);
-    } else {
-      counter.innerText = target;
-    }
-  };
-
-  update();
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    if (menuToggle.classList.contains('show')) {
+      // Χρησιμοποιούμε το Bootstrap API για να κλείσουμε το μενού
+      let bsCollapse = new bootstrap.Collapse(menuToggle, {
+        toggle: false
+      });
+      bsCollapse.hide();
+    }
+  });
 });

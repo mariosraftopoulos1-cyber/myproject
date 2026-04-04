@@ -1,122 +1,183 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="el">
 <head>
   <meta charset="UTF-8">
-  <title>Architect Studio</title>
+  <title>Τεχνικό Γραφείο Μηχανικού</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
   <link href="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/css/glightbox.min.css" rel="stylesheet">
-
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="80" tabindex="0">
 
-<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+<nav id="mainNavbar" class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="#">ARCHITECT</a>
+    <a class="navbar-brand fw-bold" href="#hero">
+      <img src="img/logo.png" alt="Logo" height="40" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
+      <span style="display:none;">ΛΟΓΟΤΥΠΟ</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#about">Η Εταιρεία</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Υπηρεσίες</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Έργα</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Επικοινωνία</a></li>
+      </ul>
+    </div>
   </div>
 </nav>
 
-<section class="hero">
+<section id="hero" class="hero d-flex align-items-center text-center">
   <div class="overlay"></div>
-  <div class="content text-center">
-    <h1 data-aos="fade-up">Design Beyond Limits</h1>
-    <p data-aos="fade-up" data-aos-delay="200">Modern Architecture Studio</p>
+  <div class="container content">
+    <img src="img/logo.png" alt="Logo" class="mb-4 hero-logo" onerror="this.style.display='none';">
+    <h1 data-aos="fade-up" class="display-3 fw-bold">Καλώς Ήρθατε</h1>
+    <p data-aos="fade-up" data-aos-delay="200" class="lead mt-3">Αξιοπιστία, Τεχνογνωσία & Συνέπεια σε κάθε έργο.</p>
   </div>
 </section>
 
-<section class="section text-center">
-  <div class="container">
-    <h2 data-aos="fade-up">About</h2>
-    <p data-aos="fade-up">We design spaces that inspire and innovate.</p>
-  </div>
-</section>
-
-<section class="section bg-light">
+<section id="about" class="section">
   <div class="container text-center">
-    <h2 data-aos="fade-up">Services</h2>
-    <div class="row mt-4">
-      <div class="col-md-4" data-aos="zoom-in">Architecture</div>
-      <div class="col-md-4" data-aos="zoom-in">Interior</div>
-      <div class="col-md-4" data-aos="zoom-in">Consulting</div>
+    <h2 class="section-title" data-aos="fade-up">Η Εταιρεία</h2>
+    <div class="row justify-content-center mt-4">
+      <div class="col-md-8" data-aos="fade-up" data-aos-delay="100">
+        <p class="text-muted">Το τεχνικό μας γραφείο δραστηριοποιείται στον χώρο των μελετών, κατασκευών και αδειοδοτήσεων, προσφέροντας ολοκληρωμένες λύσεις με γνώμονα την ασφάλεια, την αισθητική και τη λειτουργικότητα. Με πολυετή εμπειρία και συνεχή ενημέρωση για τη νομοθεσία, αναλαμβάνουμε έργα κάθε κλίμακας, χτίζοντας σχέσεις εμπιστοσύνης με τους πελάτες μας.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section text-center">
+<section id="services" class="section bg-light">
   <div class="container">
-    <div class="row">
-      <div class="col-md-4"><h2 class="counter" data-target="120">0</h2><p>Projects</p></div>
-      <div class="col-md-4"><h2 class="counter" data-target="15">0</h2><p>Years</p></div>
-      <div class="col-md-4"><h2 class="counter" data-target="50">0</h2><p>Clients</p></div>
+    <h2 class="section-title text-center" data-aos="fade-up">Υπηρεσίες</h2>
+    <div class="row g-4 mt-4">
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-box">Ηλεκτρονική Ταυτότητα Κτηρίου</div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
+        <div class="service-box">Πιστοποιητικά Ενεργειακής Απόδοσης (Π.Ε.Α)</div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-box">Τακτοποιήσεις Αυθαιρέτων</div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="250">
+        <div class="service-box">Ανακαινίσεις</div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="service-box">Βεβαιώσεις Νομιμότητας Ακινήτου</div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="350">
+        <div class="service-box">Συμβουλευτικές Υπηρεσίες Μηχανικού</div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+        <div class="service-box">Οικοδομικές Άδειες</div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="450">
+        <div class="service-box">Άδειες Μικρής Κλίμακας</div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+        <div class="service-box">Άδειες Λειτουργίας Επιχειρήσεων</div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="550">
+        <div class="service-box">Αρχιτεκτονικές Μελέτες</div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
+        <div class="service-box">Τοπογραφικά Διαγράμματα</div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section">
-  <div class="container">
-    <h2 class="text-center mb-5">Projects</h2>
+<section id="projects" class="section">
+  <div class="container text-center">
+    <h2 class="section-title mb-5" data-aos="fade-up">Έργα</h2>
     <div class="row g-4">
-
-      <div class="col-md-4">
-        <a href="https://picsum.photos/1200/800?1" class="glightbox">
-          <img src="https://picsum.photos/400/300?1" class="img-fluid">
+      <div class="col-md-4" data-aos="zoom-in">
+        <a href="https://picsum.photos/1200/800?architecture=1" class="glightbox project-card">
+          <img src="https://picsum.photos/400/300?architecture=1" class="img-fluid rounded shadow-sm" alt="Έργο 1">
         </a>
       </div>
-
-      <div class="col-md-4">
-        <a href="https://picsum.photos/1200/800?2" class="glightbox">
-          <img src="https://picsum.photos/400/300?2" class="img-fluid">
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+        <a href="https://picsum.photos/1200/800?architecture=2" class="glightbox project-card">
+          <img src="https://picsum.photos/400/300?architecture=2" class="img-fluid rounded shadow-sm" alt="Έργο 2">
         </a>
       </div>
-
-      <div class="col-md-4">
-        <a href="https://picsum.photos/1200/800?3" class="glightbox">
-          <img src="https://picsum.photos/400/300?3" class="img-fluid">
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+        <a href="https://picsum.photos/1200/800?architecture=3" class="glightbox project-card">
+          <img src="https://picsum.photos/400/300?architecture=3" class="img-fluid rounded shadow-sm" alt="Έργο 3">
         </a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section class="section bg-light text-center">
-  <div class="container">
-    <h2>Testimonials</h2>
-    <div id="carouselExample" class="carousel slide mt-4">
-      <div class="carousel-inner">
-        <div class="carousel-item active">"Amazing design!"</div>
-        <div class="carousel-item">"Professional team."</div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section">
-  <div class="container">
-    <h2 class="text-center">Contact</h2>
-    <form>
-      <input class="form-control mb-3" placeholder="Name">
-      <input class="form-control mb-3" placeholder="Email">
-      <textarea class="form-control mb-3" placeholder="Message"></textarea>
-      <button class="btn btn-dark w-100">Send</button>
-    </form>
+<section id="contact" class="section bg-light">
+  <div class="container text-center">
+    <h2 class="section-title" data-aos="fade-up">Επικοινωνία</h2>
+    <p class="text-muted mb-5" data-aos="fade-up">Επικοινωνήστε μαζί μας για οποιαδήποτε απορία ή εκτίμηση του έργου σας.</p>
+    
+    <div class="row justify-content-center g-4" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-md-3">
+        <div class="contact-info">
+          <h5 class="fw-bold">Email</h5>
+          <a href="mailto:info@mydomain.gr" class="text-decoration-none text-dark">info@mydomain.gr</a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="contact-info">
+          <h5 class="fw-bold">Κινητό</h5>
+          <a href="tel:+306900000000" class="text-decoration-none text-dark">6900 000 000</a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="contact-info">
+          <h5 class="fw-bold">Facebook</h5>
+          <a href="#" class="text-decoration-none text-dark">Το Προφίλ μας</a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="contact-info">
+          <h5 class="fw-bold">Instagram</h5>
+          <a href="#" class="text-decoration-none text-dark">@architect_studio</a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<footer class="text-center p-4 bg-dark text-white">
-  © 2026 Architect Studio
+<footer class="bg-dark text-white py-4">
+  <div class="container">
+    <div class="row align-items-center text-center text-md-start">
+      
+      <div class="col-md-4 mb-3 mb-md-0">
+        <img src="img/logo.png" alt="Logo" height="40" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
+        <span style="display:none;" class="fs-5 fw-bold">ΛΟΓΟΤΥΠΟ</span>
+      </div>
+      
+      <div class="col-md-4 mb-3 mb-md-0 text-center">
+        <a href="#about" class="text-white text-decoration-none mx-2">Εταιρεία</a>
+        <a href="#services" class="text-white text-decoration-none mx-2">Υπηρεσίες</a>
+        <a href="#projects" class="text-white text-decoration-none mx-2">Έργα</a>
+        <a href="#contact" class="text-white text-decoration-none mx-2">Επικοινωνία</a>
+      </div>
+      
+      <div class="col-md-4 text-md-end text-center">
+        <small class="text-white-50">© 2026 Το Όνομά Σου / Εταιρεία. All rights reserved.</small>
+      </div>
+
+    </div>
+  </div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/js/glightbox.min.js"></script>
-
 <script src="js/main.js"></script>
 
 </body>

@@ -1,28 +1,114 @@
-body {
-  font-family: 'Segoe UI', sans-serif;
+/* Βασικές ρυθμίσεις για ομαλό σκρολάρισμα */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px; /* Για να μην κρύβει το μενού τους τίτλους */
 }
 
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  color: #333;
+}
+
+/* Navbar Style */
+.navbar {
+  transition: all 0.3s ease;
+}
+
+.nav-link {
+  font-weight: 500;
+  color: #555 !important;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #000 !important;
+}
+
+/* Το πιο σκούρο χρώμα όταν είσαι στη συγκεκριμένη ενότητα */
+.nav-link.active {
+  color: #000 !important;
+  font-weight: 700;
+  position: relative;
+}
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 80%;
+  height: 2px;
+  background-color: #000;
+}
+
+/* Hero Section */
 .hero {
-  height: 100vh;
-  background: url('https://picsum.photos/1600/900?architecture') center/cover;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 100vh;
+  /* Εικόνα Background Μηχανικού από το Unsplash */
+  background: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat;
+  position: relative;
+  color: white;
 }
 
 .hero .overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.5);
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.6); /* Σκουραίνει την εικόνα για να φαίνονται τα γράμματα */
 }
 
 .hero .content {
-  position: relative;
-  color: white;
+  position: relative;
+  z-index: 2;
 }
 
+.hero-logo {
+  max-height: 120px;
+}
+
+/* Sections */
 .section {
-  padding: 80px 0;
+  padding: 100px 0;
+}
+
+.section-title {
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Υπηρεσίες - Minimal Κουτάκια */
+.service-box {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #eaeaea;
+  font-weight: 500;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  border-color: #ccc;
+}
+
+/* Έργα (Projects) Hover Effect */
+.project-card img {
+  transition: opacity 0.3s ease;
+}
+.project-card:hover img {
+  opacity: 0.8;
+}
+
+/* Επικοινωνία */
+.contact-info {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
 }
